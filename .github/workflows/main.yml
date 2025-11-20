@@ -1,0 +1,16 @@
+name: Hello World CI
+
+on: [push]
+
+jobs:
+  say-hello-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run a hello world command
+        run: echo "Hello, world! This is a simple CI/CD step."
+      - name: Optional - Run a multi-line script
+        run: |
+          echo "This step can execute multiple commands."
+          echo "For example, you could run tests here."
